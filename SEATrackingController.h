@@ -60,7 +60,7 @@ public:
         double error = tau_des - tau_spring;
         double u = 0;
 
-        int choice = 2;
+        int choice = 1;
         if (choice == 0) {
             u = (_Kp * error) - (_Kd * omega_m);
         } else if (choice == 1){

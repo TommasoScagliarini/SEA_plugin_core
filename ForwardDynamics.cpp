@@ -15,7 +15,7 @@ int main() {
         Model model("C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA-plugin-OpenSim - core\\Adjusted_sea.osim");
         
         double Kp = 100; 
-        double Kd = 2.5; 
+        double Kd = 0; 
         
         /* First argument: Actuation_force.sto file of the "ideal model" (CMC output)
         Second argument: Name of the actuator in the CMC file (e.g., "reserve_pros_knee_angle")
@@ -30,9 +30,7 @@ int main() {
 
         // model.setUseVisualizer(true); 
         State& s = model.initSystem();
-        
-        // Se necessario, imposta lo stato iniziale (theta_q e velocità) copiandolo dal primo frame della cinematica
-        // ...
+        s.setTime(4.26);
         
         Manager manager(model);
         manager.initialize(s);
