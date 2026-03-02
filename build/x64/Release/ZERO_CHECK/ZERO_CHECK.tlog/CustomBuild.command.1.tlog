@@ -1,0 +1,10 @@
+^C:\USERS\TOMMA\DESKTOP\OPENSIM OMNIBUS\SEA-PLUGIN-OPENSIM - CORE\BUILD\CMAKEFILES\6D84829D85D4845F15406A6D04554451\GENERATE.STAMP.RULE
+setlocal
+C:\Strawberry\c\bin\cmake.exe "-SC:/Users/tomma/Desktop/Opensim OMNIBUS/SEA-plugin-OpenSim - core" "-BC:/Users/tomma/Desktop/Opensim OMNIBUS/SEA-plugin-OpenSim - core/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA-plugin-OpenSim - core/build/CustomActuatorExample.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

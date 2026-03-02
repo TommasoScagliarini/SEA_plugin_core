@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\build\CMakeFiles\6d84829d85d4845f15406a6d04554451\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{65043D77-FD3D-34FC-B2FF-E1CB1EFEF200}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

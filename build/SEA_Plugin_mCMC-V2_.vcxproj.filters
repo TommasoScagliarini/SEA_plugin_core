@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\SeriesElasticActuator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\Plugin_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B476CB22-A7FE-32E1-872D-3EEBB4A73CDA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
