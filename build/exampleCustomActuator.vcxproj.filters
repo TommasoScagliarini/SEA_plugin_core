@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\ForwardDynamics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\Plugin_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\SeriesElasticActuator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\CustomControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\SEATrackingController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\SeriesElasticActuator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{EEEF7008-B536-3A6F-884C-4E46CBAE3A75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5D7D34E0-2A4E-3179-AEDF-95C03F0AC02A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -14,7 +14,7 @@ int main() {
         // Real model with SEA
         Model model("C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA-plugin-OpenSim - core\\Adjusted_sea.osim");
         
-        double Kp = 100; 
+        double Kp = 1; 
         double Kd = 0; 
         
         /* First argument: Actuation_force.sto file of the "ideal model" (CMC output)
@@ -30,12 +30,30 @@ int main() {
 
         // model.setUseVisualizer(true); 
         State& s = model.initSystem();
-        s.setTime(4.26);
         
+        std::string Kinematic_refs_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\3DGaitModel2392_Kinematics_q.sto";
+        Storage KinRefFile(Kinematic_refs_file);
+
+        double startTime = 4.26;
+        s.setTime(startTime);
+
+        const CoordinateSet& coordSet = model.getCoordinateSet();
+        Array<double> stateValues;
+        stateValues.setSize(coordSet.getSize());
+        KinRefFile.getDataAtTime(startTime, coordSet.getSize(), stateValues);
+
+        for (int i = 0; i < stateValues.getSize(); ++i) {
+            coordSet.get(i).setValue(s, stateValues[i]);
+            //cout << "[" << i << "] "<< "coordinate set " << coordSet.get(i).getName() << ": " << stateValues[i] << endl;
+        }
+        
+        model.assemble(s);
         Manager manager(model);
+        manager.getIntegrator().setAccuracy(1.0e-3);
+        
         manager.initialize(s);
         cout << "Simulazione in corso..." << endl;
-        manager.integrate(1.0); 
+        manager.integrate(5.0); 
 
         // 4. Salva i risultati
         manager.getStateStorage().print("SEA_Tracking_Results_States.sto");

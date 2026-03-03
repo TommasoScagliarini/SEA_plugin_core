@@ -1,0 +1,10 @@
+^C:\USERS\TOMMA\DESKTOP\OPENSIM OMNIBUS\SEA_PLUGIN_CORE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core" "-BC:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build" --check-stamp-file "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

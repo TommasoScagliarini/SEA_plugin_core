@@ -92,7 +92,6 @@ void SeriesElasticActuator::extendInitStateFromProperties(SimTK::State& s) const
 //==============================================================================
 // 4. CALCOLO DERIVATE (DINAMICA MOTORE)
 //==============================================================================
-int k = 0;
 void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& s) const {
     
     // Get Motor's parameters
@@ -120,7 +119,7 @@ void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& 
         u = controls[0];
      }
 
-    
+    int k = 0;
     // Debug: stampa solo ogni tanto o se c'è input significativo
     if (std::abs(u) > 0.001 && k % 10 == 0) {
         printf("[SEA] t=%.3f | u=%.2f | motor angle=%.2f | joint angle=%.2f\n", s.getTime(), u, theta_m, theta_joint);
