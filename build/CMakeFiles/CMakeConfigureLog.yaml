@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-      Compilazione avviata 02/03/2026 23:23:51.
+      Compilazione avviata 03/03/2026 18:02:11.
       
       Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdC\\CompilerIdC.vcxproj" sul nodo 1 (destinazioni predefinite).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           Avvisi: 0
           Errori: 0
       
-      Tempo trascorso 00:00:00.39
+      Tempo trascorso 00:00:00.44
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-      Compilazione avviata 02/03/2026 23:23:52.
+      Compilazione avviata 03/03/2026 18:02:12.
       
       Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\3.31.6-msvc6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" sul nodo 1 (destinazioni predefinite).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           Avvisi: 0
           Errori: 0
       
-      Tempo trascorso 00:00:00.41
+      Tempo trascorso 00:00:00.45
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-ob6tfy"
-      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-ob6tfy"
+      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-sn9uxw"
+      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-sn9uxw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-ob6tfy'
+        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-sn9uxw'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_32397.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_56a35.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-        Compilazione avviata 02/03/2026 23:23:52.
+        Compilazione avviata 03/03/2026 18:02:13.
         
-        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ob6tfy\\cmTC_32397.vcxproj" sul nodo 1 (destinazioni predefinite).
+        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sn9uxw\\cmTC_56a35.vcxproj" sul nodo 1 (destinazioni predefinite).
         PrepareForBuild:
-          Creazione directory "cmTC_32397.dir\\Debug\\".
+          Creazione directory "cmTC_56a35.dir\\Debug\\".
           L'output strutturato ├¿ abilitato. La formattazione della diagnostica del compilatore rifletter├á la gerarchia degli errori. Per altri dettagli, vedere https://aka.ms/cpp/structured-output.
-          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ob6tfy\\Debug\\".
-          Creazione directory "cmTC_32397.dir\\Debug\\cmTC_32397.tlog\\".
+          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sn9uxw\\Debug\\".
+          Creazione directory "cmTC_56a35.dir\\Debug\\cmTC_56a35.tlog\\".
         InitializeBuildStatus:
-          Creazione di "cmTC_32397.dir\\Debug\\cmTC_32397.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
-          Aggiornamento timestamp di "cmTC_32397.dir\\Debug\\cmTC_32397.tlog\\unsuccessfulbuild".
+          Creazione di "cmTC_56a35.dir\\Debug\\cmTC_56a35.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
+          Aggiornamento timestamp di "cmTC_56a35.dir\\Debug\\cmTC_56a35.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_32397.dir\\Debug\\\\" /Fd"cmTC_32397.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_56a35.dir\\Debug\\\\" /Fd"cmTC_56a35.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler versione 19.44.35222 per x64
           Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_32397.dir\\Debug\\\\" /Fd"cmTC_32397.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_56a35.dir\\Debug\\\\" /Fd"cmTC_56a35.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ob6tfy\\Debug\\cmTC_32397.exe" /INCREMENTAL /ILK:"cmTC_32397.dir\\Debug\\cmTC_32397.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-ob6tfy/Debug/cmTC_32397.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-ob6tfy/Debug/cmTC_32397.lib" /MACHINE:X64  /machine:x64 cmTC_32397.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_32397.vcxproj -> C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ob6tfy\\Debug\\cmTC_32397.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sn9uxw\\Debug\\cmTC_56a35.exe" /INCREMENTAL /ILK:"cmTC_56a35.dir\\Debug\\cmTC_56a35.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-sn9uxw/Debug/cmTC_56a35.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-sn9uxw/Debug/cmTC_56a35.lib" /MACHINE:X64  /machine:x64 cmTC_56a35.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_56a35.vcxproj -> C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sn9uxw\\Debug\\cmTC_56a35.exe
         FinalizeBuildStatus:
-          Eliminazione del file "cmTC_32397.dir\\Debug\\cmTC_32397.tlog\\unsuccessfulbuild" in corso.
-          Aggiornamento timestamp di "cmTC_32397.dir\\Debug\\cmTC_32397.tlog\\cmTC_32397.lastbuildstate".
-        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ob6tfy\\cmTC_32397.vcxproj" (destinazioni predefinite) completata.
+          Eliminazione del file "cmTC_56a35.dir\\Debug\\cmTC_56a35.tlog\\unsuccessfulbuild" in corso.
+          Aggiornamento timestamp di "cmTC_56a35.dir\\Debug\\cmTC_56a35.tlog\\cmTC_56a35.lastbuildstate".
+        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sn9uxw\\cmTC_56a35.vcxproj" (destinazioni predefinite) completata.
         
         Compilazione completata.
             Avvisi: 0
             Errori: 0
         
-        Tempo trascorso 00:00:00.39
+        Tempo trascorso 00:00:00.42
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-svdvtt"
-      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-svdvtt"
+      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-9a3xuq"
+      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-9a3xuq"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-svdvtt'
+        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-9a3xuq'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5fb80.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4b88e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-        Compilazione avviata 02/03/2026 23:23:53.
+        Compilazione avviata 03/03/2026 18:02:14.
         
-        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-svdvtt\\cmTC_5fb80.vcxproj" sul nodo 1 (destinazioni predefinite).
+        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9a3xuq\\cmTC_4b88e.vcxproj" sul nodo 1 (destinazioni predefinite).
         PrepareForBuild:
-          Creazione directory "cmTC_5fb80.dir\\Debug\\".
+          Creazione directory "cmTC_4b88e.dir\\Debug\\".
           L'output strutturato ├¿ abilitato. La formattazione della diagnostica del compilatore rifletter├á la gerarchia degli errori. Per altri dettagli, vedere https://aka.ms/cpp/structured-output.
-          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-svdvtt\\Debug\\".
-          Creazione directory "cmTC_5fb80.dir\\Debug\\cmTC_5fb80.tlog\\".
+          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9a3xuq\\Debug\\".
+          Creazione directory "cmTC_4b88e.dir\\Debug\\cmTC_4b88e.tlog\\".
         InitializeBuildStatus:
-          Creazione di "cmTC_5fb80.dir\\Debug\\cmTC_5fb80.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
-          Aggiornamento timestamp di "cmTC_5fb80.dir\\Debug\\cmTC_5fb80.tlog\\unsuccessfulbuild".
+          Creazione di "cmTC_4b88e.dir\\Debug\\cmTC_4b88e.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
+          Aggiornamento timestamp di "cmTC_4b88e.dir\\Debug\\cmTC_4b88e.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5fb80.dir\\Debug\\\\" /Fd"cmTC_5fb80.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4b88e.dir\\Debug\\\\" /Fd"cmTC_4b88e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler versione 19.44.35222 per x64
           Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5fb80.dir\\Debug\\\\" /Fd"cmTC_5fb80.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4b88e.dir\\Debug\\\\" /Fd"cmTC_4b88e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-svdvtt\\Debug\\cmTC_5fb80.exe" /INCREMENTAL /ILK:"cmTC_5fb80.dir\\Debug\\cmTC_5fb80.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-svdvtt/Debug/cmTC_5fb80.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-svdvtt/Debug/cmTC_5fb80.lib" /MACHINE:X64  /machine:x64 cmTC_5fb80.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_5fb80.vcxproj -> C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-svdvtt\\Debug\\cmTC_5fb80.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9a3xuq\\Debug\\cmTC_4b88e.exe" /INCREMENTAL /ILK:"cmTC_4b88e.dir\\Debug\\cmTC_4b88e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-9a3xuq/Debug/cmTC_4b88e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-9a3xuq/Debug/cmTC_4b88e.lib" /MACHINE:X64  /machine:x64 cmTC_4b88e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_4b88e.vcxproj -> C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9a3xuq\\Debug\\cmTC_4b88e.exe
         FinalizeBuildStatus:
-          Eliminazione del file "cmTC_5fb80.dir\\Debug\\cmTC_5fb80.tlog\\unsuccessfulbuild" in corso.
-          Aggiornamento timestamp di "cmTC_5fb80.dir\\Debug\\cmTC_5fb80.tlog\\cmTC_5fb80.lastbuildstate".
-        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-svdvtt\\cmTC_5fb80.vcxproj" (destinazioni predefinite) completata.
+          Eliminazione del file "cmTC_4b88e.dir\\Debug\\cmTC_4b88e.tlog\\unsuccessfulbuild" in corso.
+          Aggiornamento timestamp di "cmTC_4b88e.dir\\Debug\\cmTC_4b88e.tlog\\cmTC_4b88e.lastbuildstate".
+        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9a3xuq\\cmTC_4b88e.vcxproj" (destinazioni predefinite) completata.
         
         Compilazione completata.
             Avvisi: 0
             Errori: 0
         
-        Tempo trascorso 00:00:00.39
+        Tempo trascorso 00:00:00.44
         
       exitCode: 0
   -
@@ -298,8 +298,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-zsxfh2"
-      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-zsxfh2"
+      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-jepkmo"
+      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-jepkmo"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -308,40 +308,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-zsxfh2'
+        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-jepkmo'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_79a12.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f6f19.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-        Compilazione avviata 02/03/2026 23:23:54.
+        Compilazione avviata 03/03/2026 18:02:15.
         
-        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\cmTC_79a12.vcxproj" sul nodo 1 (destinazioni predefinite).
+        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\cmTC_f6f19.vcxproj" sul nodo 1 (destinazioni predefinite).
         PrepareForBuild:
-          Creazione directory "cmTC_79a12.dir\\Debug\\".
+          Creazione directory "cmTC_f6f19.dir\\Debug\\".
           L'output strutturato ├¿ abilitato. La formattazione della diagnostica del compilatore rifletter├á la gerarchia degli errori. Per altri dettagli, vedere https://aka.ms/cpp/structured-output.
-          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\Debug\\".
-          Creazione directory "cmTC_79a12.dir\\Debug\\cmTC_79a12.tlog\\".
+          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\Debug\\".
+          Creazione directory "cmTC_f6f19.dir\\Debug\\cmTC_f6f19.tlog\\".
         InitializeBuildStatus:
-          Creazione di "cmTC_79a12.dir\\Debug\\cmTC_79a12.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
-          Aggiornamento timestamp di "cmTC_79a12.dir\\Debug\\cmTC_79a12.tlog\\unsuccessfulbuild".
+          Creazione di "cmTC_f6f19.dir\\Debug\\cmTC_f6f19.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
+          Aggiornamento timestamp di "cmTC_f6f19.dir\\Debug\\cmTC_f6f19.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_79a12.dir\\Debug\\\\" /Fd"cmTC_79a12.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\src.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f6f19.dir\\Debug\\\\" /Fd"cmTC_f6f19.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler versione 19.44.35222 per x64
           Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_79a12.dir\\Debug\\\\" /Fd"cmTC_79a12.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\src.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f6f19.dir\\Debug\\\\" /Fd"cmTC_f6f19.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\src.c"
           src.c
-        C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\src.c(1,10): error C1083: Non ├¿ possibile aprire il file inclusione: 'pthread.h': No such file or directory [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\cmTC_79a12.vcxproj]
-        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\cmTC_79a12.vcxproj" (destinazioni predefinite) NON COMPLETATA.
+        C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\src.c(1,10): error C1083: Non ├¿ possibile aprire il file inclusione: 'pthread.h': No such file or directory [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\cmTC_f6f19.vcxproj]
+        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\cmTC_f6f19.vcxproj" (destinazioni predefinite) NON COMPLETATA.
         
         Compilazione NON RIUSCITA.
         
-        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\cmTC_79a12.vcxproj" (destinazione predefinita) (1) ->
+        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\cmTC_f6f19.vcxproj" (destinazione predefinita) (1) ->
         (destinazione: ClCompile) -> 
-          C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\src.c(1,10): error C1083: Non ├¿ possibile aprire il file inclusione: 'pthread.h': No such file or directory [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zsxfh2\\cmTC_79a12.vcxproj]
+          C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\src.c(1,10): error C1083: Non ├¿ possibile aprire il file inclusione: 'pthread.h': No such file or directory [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jepkmo\\cmTC_f6f19.vcxproj]
         
             Avvisi: 0
             Errori: 1
         
-        Tempo trascorso 00:00:00.24
+        Tempo trascorso 00:00:00.27
         
       exitCode: 1
   -
@@ -356,8 +356,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-hyxnqp"
-      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-hyxnqp"
+      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-bpwu7t"
+      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-bpwu7t"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -366,42 +366,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-hyxnqp'
+        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-bpwu7t'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_212ba.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ed758.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-        Compilazione avviata 02/03/2026 23:23:54.
+        Compilazione avviata 03/03/2026 18:02:15.
         
-        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\cmTC_212ba.vcxproj" sul nodo 1 (destinazioni predefinite).
+        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\cmTC_ed758.vcxproj" sul nodo 1 (destinazioni predefinite).
         PrepareForBuild:
-          Creazione directory "cmTC_212ba.dir\\Debug\\".
+          Creazione directory "cmTC_ed758.dir\\Debug\\".
           L'output strutturato ├¿ abilitato. La formattazione della diagnostica del compilatore rifletter├á la gerarchia degli errori. Per altri dettagli, vedere https://aka.ms/cpp/structured-output.
-          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\Debug\\".
-          Creazione directory "cmTC_212ba.dir\\Debug\\cmTC_212ba.tlog\\".
+          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\Debug\\".
+          Creazione directory "cmTC_ed758.dir\\Debug\\cmTC_ed758.tlog\\".
         InitializeBuildStatus:
-          Creazione di "cmTC_212ba.dir\\Debug\\cmTC_212ba.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
-          Aggiornamento timestamp di "cmTC_212ba.dir\\Debug\\cmTC_212ba.tlog\\unsuccessfulbuild".
+          Creazione di "cmTC_ed758.dir\\Debug\\cmTC_ed758.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
+          Aggiornamento timestamp di "cmTC_ed758.dir\\Debug\\cmTC_ed758.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_212ba.dir\\Debug\\\\" /Fd"cmTC_212ba.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ed758.dir\\Debug\\\\" /Fd"cmTC_ed758.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler versione 19.44.35222 per x64
           Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_212ba.dir\\Debug\\\\" /Fd"cmTC_212ba.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ed758.dir\\Debug\\\\" /Fd"cmTC_ed758.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\Debug\\cmTC_212ba.exe" /INCREMENTAL /ILK:"cmTC_212ba.dir\\Debug\\cmTC_212ba.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-hyxnqp/Debug/cmTC_212ba.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-hyxnqp/Debug/cmTC_212ba.lib" /MACHINE:X64  /machine:x64 cmTC_212ba.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: impossibile aprire il file 'pthreads.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\cmTC_212ba.vcxproj]
-        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\cmTC_212ba.vcxproj" (destinazioni predefinite) NON COMPLETATA.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\Debug\\cmTC_ed758.exe" /INCREMENTAL /ILK:"cmTC_ed758.dir\\Debug\\cmTC_ed758.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-bpwu7t/Debug/cmTC_ed758.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-bpwu7t/Debug/cmTC_ed758.lib" /MACHINE:X64  /machine:x64 cmTC_ed758.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: impossibile aprire il file 'pthreads.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\cmTC_ed758.vcxproj]
+        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\cmTC_ed758.vcxproj" (destinazioni predefinite) NON COMPLETATA.
         
         Compilazione NON RIUSCITA.
         
-        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\cmTC_212ba.vcxproj" (destinazione predefinita) (1) ->
+        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\cmTC_ed758.vcxproj" (destinazione predefinita) (1) ->
         (destinazione: Link) -> 
-          LINK : fatal error LNK1104: impossibile aprire il file 'pthreads.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-hyxnqp\\cmTC_212ba.vcxproj]
+          LINK : fatal error LNK1104: impossibile aprire il file 'pthreads.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bpwu7t\\cmTC_ed758.vcxproj]
         
             Avvisi: 0
             Errori: 1
         
-        Tempo trascorso 00:00:00.29
+        Tempo trascorso 00:00:00.35
         
       exitCode: 1
   -
@@ -416,8 +416,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-twlemx"
-      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-twlemx"
+      source: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-m93lvd"
+      binary: "C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-m93lvd"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -426,42 +426,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-twlemx'
+        Change Dir: 'C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-m93lvd'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f859e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_682c8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Versione di MSBuild 17.14.23+b0019275e per .NET Framework
-        Compilazione avviata 02/03/2026 23:23:55.
+        Compilazione avviata 03/03/2026 18:02:16.
         
-        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\cmTC_f859e.vcxproj" sul nodo 1 (destinazioni predefinite).
+        Progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\cmTC_682c8.vcxproj" sul nodo 1 (destinazioni predefinite).
         PrepareForBuild:
-          Creazione directory "cmTC_f859e.dir\\Debug\\".
+          Creazione directory "cmTC_682c8.dir\\Debug\\".
           L'output strutturato ├¿ abilitato. La formattazione della diagnostica del compilatore rifletter├á la gerarchia degli errori. Per altri dettagli, vedere https://aka.ms/cpp/structured-output.
-          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\Debug\\".
-          Creazione directory "cmTC_f859e.dir\\Debug\\cmTC_f859e.tlog\\".
+          Creazione directory "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\Debug\\".
+          Creazione directory "cmTC_682c8.dir\\Debug\\cmTC_682c8.tlog\\".
         InitializeBuildStatus:
-          Creazione di "cmTC_f859e.dir\\Debug\\cmTC_f859e.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
-          Aggiornamento timestamp di "cmTC_f859e.dir\\Debug\\cmTC_f859e.tlog\\unsuccessfulbuild".
+          Creazione di "cmTC_682c8.dir\\Debug\\cmTC_682c8.tlog\\unsuccessfulbuild". ├ê stato specificato "AlwaysCreate".
+          Aggiornamento timestamp di "cmTC_682c8.dir\\Debug\\cmTC_682c8.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f859e.dir\\Debug\\\\" /Fd"cmTC_f859e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\CheckFunctionExists.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_682c8.dir\\Debug\\\\" /Fd"cmTC_682c8.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler versione 19.44.35222 per x64
           Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f859e.dir\\Debug\\\\" /Fd"cmTC_f859e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\CheckFunctionExists.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_682c8.dir\\Debug\\\\" /Fd"cmTC_682c8.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\Debug\\cmTC_f859e.exe" /INCREMENTAL /ILK:"cmTC_f859e.dir\\Debug\\cmTC_f859e.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-twlemx/Debug/cmTC_f859e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-twlemx/Debug/cmTC_f859e.lib" /MACHINE:X64  /machine:x64 cmTC_f859e.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: impossibile aprire il file 'pthread.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\cmTC_f859e.vcxproj]
-        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\cmTC_f859e.vcxproj" (destinazioni predefinite) NON COMPLETATA.
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\Debug\\cmTC_682c8.exe" /INCREMENTAL /ILK:"cmTC_682c8.dir\\Debug\\cmTC_682c8.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-m93lvd/Debug/cmTC_682c8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core/build/CMakeFiles/CMakeScratch/TryCompile-m93lvd/Debug/cmTC_682c8.lib" /MACHINE:X64  /machine:x64 cmTC_682c8.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: impossibile aprire il file 'pthread.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\cmTC_682c8.vcxproj]
+        Compilazione progetto "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\cmTC_682c8.vcxproj" (destinazioni predefinite) NON COMPLETATA.
         
         Compilazione NON RIUSCITA.
         
-        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\cmTC_f859e.vcxproj" (destinazione predefinita) (1) ->
+        "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\cmTC_682c8.vcxproj" (destinazione predefinita) (1) ->
         (destinazione: Link) -> 
-          LINK : fatal error LNK1104: impossibile aprire il file 'pthread.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-twlemx\\cmTC_f859e.vcxproj]
+          LINK : fatal error LNK1104: impossibile aprire il file 'pthread.lib' [C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\build\\CMakeFiles\\CMakeScratch\\TryCompile-m93lvd\\cmTC_682c8.vcxproj]
         
             Avvisi: 0
             Errori: 1
         
-        Tempo trascorso 00:00:00.31
+        Tempo trascorso 00:00:00.33
         
       exitCode: 1
 ...

@@ -62,9 +62,11 @@ public:
 
         int choice = 1;
         if (choice == 0) {
-            u = (_Kp * error) - (_Kd * omega_m);
-        } else if (choice == 1){
             u = (_Kp * error);
+
+        } else if (choice == 1){
+            u = (_Kp * error) - (_Kd * omega_m);
+            
         }else if (choice == 2){
             std::vector<int> derivComponents = {0};
             double tau_des_dot = _tauDesFunc->calcDerivative(derivComponents, timeVec); 

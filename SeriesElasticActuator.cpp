@@ -119,11 +119,13 @@ void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& 
         u = controls[0];
      }
 
-    int k = 0;
+    static int k = 0; 
+    k++;
+    //printf("[DEBUG] k=%d, u=%.4f\n", k, u);
     // Debug: stampa solo ogni tanto o se c'è input significativo
-    if (std::abs(u) > 0.001 && k % 10 == 0) {
+    if (std::abs(u) > 0.001 && k % 100 == 0) {
         printf("[SEA] t=%.3f | u=%.2f | motor angle=%.2f | joint angle=%.2f\n", s.getTime(), u, theta_m, theta_joint);
-        k++;
+       
     }
 
     // 5. Elastic torque computation
