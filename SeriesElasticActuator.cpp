@@ -132,7 +132,7 @@ void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& 
     //double tau_spring = K * (theta_joint - theta_m);
 
     // 6. Motion equations
-    double tau_input = u;//*F_opt;
+    double tau_input = u*F_opt;
     double theta_m_dot = omega_m;
     double omega_m_dot = (tau_input - tau_spring - (Bm * omega_m)) / Jm;
 

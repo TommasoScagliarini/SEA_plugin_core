@@ -48,9 +48,9 @@ void initializeModel(Model& model, State& s, Storage KinRefFile, double startTim
             coord.setValue(s, val);
 
             // 2. BLOCCO DELLE COORDINATE: Blocca tutto tranne il ginocchio con il SEA
-            if (coordName != "pros_knee_angle") {
+            //if (coordName != "pros_knee_angle") {
                 coord.setLocked(s, true);
-            }
+            //}
             
             // 3. Stampa a schermo indicando se è stata bloccata
             cout << "[INIT] " << coordName << " = " << val << " rad" 

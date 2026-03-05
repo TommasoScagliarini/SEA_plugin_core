@@ -339,6 +339,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\CustomControl.h" />
     <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\ForwardDynamics.cpp" />
+    <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\InitModel.h" />
     <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\Plugin_interface.cpp" />
     <ClInclude Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\SEATrackingController.h" />
     <ClCompile Include="C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\SeriesElasticActuator.cpp" />
