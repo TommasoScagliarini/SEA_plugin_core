@@ -1,0 +1,74 @@
+[2026-03-05 16:27:17.282] [info] Updating Model file from 40000 to latest format...
+[2026-03-05 16:27:17.292] [info] Loaded model 3DGaitModel2392-Scaled-SEA from file C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\Adjusted_sea.osim
+[2026-03-05 16:27:17.293] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-05 16:27:17.293] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-03-05 16:27:17.294] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-05 16:27:17.294] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-03-05 16:27:17.294] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-05 16:27:17.295] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-05 16:27:17.295] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-05 16:27:17.295] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-05 16:27:17.295] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-05 16:27:17.296] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-05 16:27:17.297] [warning] Couldn't find file 'transfemur_l.stl'.
+[2026-03-05 16:27:17.297] [warning] Couldn't find file 'osseo_femur.STL'.
+[2026-03-05 16:27:17.298] [warning] Couldn't find file 'pors_tibia.STL'.
+[2026-03-05 16:27:17.299] [warning] Couldn't find file 'AM_foot_l.stl'.
+[2026-03-05 16:27:17.299] [warning] Couldn't find file 'hat_spine.vtp'.
+[2026-03-05 16:27:17.300] [warning] Couldn't find file 'hat_jaw.vtp'.
+[2026-03-05 16:27:17.300] [warning] Couldn't find file 'hat_skull.vtp'.
+[2026-03-05 16:27:17.300] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-05 16:27:17.309] [info] Storage: read data file = C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\3DGaitModel2392_Actuation_force.sto (nr=11536 nc=98)
+[2026-03-05 16:27:17.749] [error] IO.OpenInputFile(const string&,openmode mode): failed to open C:Users	omma\Desktop\Opensim OMNIBUS\SEA_plugin_coreDGaitModel2392_Kinematics_q.sto.
+[2026-03-05 16:28:16.230] [info] Updating Model file from 40000 to latest format...
+[2026-03-05 16:28:16.240] [info] Loaded model 3DGaitModel2392-Scaled-SEA from file C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\Adjusted_sea.osim
+[2026-03-05 16:28:16.240] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-05 16:28:16.240] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-03-05 16:28:16.240] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-05 16:28:16.240] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'transfemur_l.stl'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'osseo_femur.STL'.
+[2026-03-05 16:28:16.241] [warning] Couldn't find file 'pors_tibia.STL'.
+[2026-03-05 16:28:16.242] [warning] Couldn't find file 'AM_foot_l.stl'.
+[2026-03-05 16:28:16.242] [warning] Couldn't find file 'hat_spine.vtp'.
+[2026-03-05 16:28:16.242] [warning] Couldn't find file 'hat_jaw.vtp'.
+[2026-03-05 16:28:16.242] [warning] Couldn't find file 'hat_skull.vtp'.
+[2026-03-05 16:28:16.242] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-05 16:28:16.243] [info] Storage: read data file = C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\3DGaitModel2392_Actuation_force.sto (nr=11536 nc=98)
+[2026-03-05 16:28:16.678] [info] Storage: read data file = C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\3DGaitModel2392_Kinematics_q.sto (nr=11536 nc=22)
+[2026-03-05 16:28:16.851] [info] -------
+[2026-03-05 16:28:16.851] [info] Manager
+[2026-03-05 16:28:16.851] [info] -------
+[2026-03-05 16:28:16.852] [info] Starting integration at initial time 4.26 s...
+[2026-03-05 16:33:28.000] [info] Updating Model file from 40000 to latest format...
+[2026-03-05 16:33:28.010] [info] Loaded model 3DGaitModel2392-Scaled-SEA from file C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\Adjusted_sea.osim
+[2026-03-05 16:33:28.010] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-05 16:33:28.011] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'transfemur_l.stl'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'osseo_femur.STL'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'pors_tibia.STL'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'AM_foot_l.stl'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'hat_spine.vtp'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'hat_jaw.vtp'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'hat_skull.vtp'.
+[2026-03-05 16:33:28.012] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-05 16:33:28.013] [info] Storage: read data file = C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA-plugin-OpenSim - core\3DGaitModel2392_Actuation_force.sto (nr=11536 nc=98)
+[2026-03-05 16:33:28.459] [info] Storage: read data file = C:\Users\tomma\Desktop\Opensim OMNIBUS\SEA_plugin_core\3DGaitModel2392_Kinematics_q.sto (nr=11536 nc=22)
+[2026-03-05 16:33:28.632] [info] -------
+[2026-03-05 16:33:28.632] [info] Manager
+[2026-03-05 16:33:28.632] [info] -------
+[2026-03-05 16:33:28.632] [info] Starting integration at initial time 4.26 s...

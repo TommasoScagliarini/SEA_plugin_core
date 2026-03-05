@@ -133,4 +133,11 @@ else()
     target_link_libraries(Test_SEA_App ${OpenSim_LIBRARIES})
     target_compile_options(Test_SEA_App PUBLIC "-fno-char8_t")
 
+    add_executable(ForwardDynamics_App 
+        ForwardDynamics.cpp
+        SeriesElasticActuator.cpp
+    )
+    target_link_libraries(ForwardDynamics_App ${OpenSim_LIBRARIES})
+    target_compile_options(ForwardDynamics_App PUBLIC "-fno-char8_t")
+
 endif()

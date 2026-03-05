@@ -14,9 +14,21 @@ int main() {
         try {
             cout << "--- Avvio Simulazione N." << iter + 1 << " SEA Tracking ---" << endl;
 
+            std::string Model_file, TauRef_file, Kinematic_refs_file, Results_file;
+
+            #ifdef _WIN32
+                Model_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\Adjusted_sea.osim";
+                TauRef_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA-plugin-OpenSim - core\\3DGaitModel2392_Actuation_force.sto";
+                Kinematic_refs_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\3DGaitModel2392_Kinematics_q.sto";
+                Results_file = "C:\\Users\\tomma\\Desktop\\Results\\";
+            #else
+                Model_file = "/Users/tommy/Documents/SEA_plugin_core/Adjusted_sea.osim";
+                TauRef_file = "/Users/tommy/Documents/SEA_plugin_core/3DGaitModel2392_Actuation_force.sto";
+                Kinematic_refs_file = "/Users/tommy/Documents/SEA_plugin_core/3DGaitModel2392_Kinematics_q.sto";
+            #endif
+
             Object::registerType(SeriesElasticActuator());
-            // Real model with SEA
-            Model model("C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA-plugin-OpenSim - core\\Adjusted_sea.osim");
+            Model model(Model_file); 
             
             double Kp[10] = {1000, 1000, 1000, 100, 100, 100, 5000, 5000, 10000, 10};            
             double Kd[10] = { 20,    5,  250,  30,  10, 100,  220,   50,   315, 50};
@@ -25,8 +37,6 @@ int main() {
             /* First argument: Actuation_force.sto file of the "ideal model" (CMC output)
             Second argument: Name of the actuator in the CMC file (e.g., "reserve_pros_knee_angle")
             Third argument: Name of your SEA in the real model (e.g., "SEA") */
-
-            std::string TauRef_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA-plugin-OpenSim - core\\3DGaitModel2392_Actuation_force.sto";
 
             auto controller = new SEATrackingController(TauRef_file, "reserve_pros_knee_angle", "SEA", Kp[iter], Kd[iter]);
             cout<< "Controller creato con successo!" << endl;
@@ -39,7 +49,6 @@ int main() {
             model.setUseVisualizer(false); 
             State& s = model.initSystem();
             
-            std::string Kinematic_refs_file = "C:\\Users\\tomma\\Desktop\\Opensim OMNIBUS\\SEA_plugin_core\\3DGaitModel2392_Kinematics_q.sto";
             Storage KinRefFile(Kinematic_refs_file);
 
             double startTime = 4.26;
@@ -63,7 +72,7 @@ int main() {
             STOFileAdapter::write(controlsTable, "C:\\Users\\tomma\\Desktop\\Results\\SEA_Tracking_Results_Controls.sto");
             */         
             
-            forceReporter->getForceStorage().print("C:\\Users\\tomma\\Desktop\\Results\\" + std::to_string(iter + 1) + " - SEA_Kp=" + std::to_string((int)Kp[iter]) + "_Kd=" + std::to_string((int)Kd[iter]) + ".sto");
+            forceReporter->getForceStorage().print(Results_file + std::to_string(iter + 1) + " - SEA_Kp=" + std::to_string((int)Kp[iter]) + "_Kd=" + std::to_string((int)Kd[iter]) + ".sto");
             cout << "Simulazione completata con successo!" << endl;
 
         } catch (const OpenSim::Exception& ex) {

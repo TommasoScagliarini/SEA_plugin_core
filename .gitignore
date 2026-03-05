@@ -1,0 +1,16 @@
+# 1. Ignora TUTTO (file e sottocartelle) all'interno di build/
+build/*
+!build/*.dll
+!build/*.dylib
+# 2. ECCEZIONE: Non ignorare la sottocartella Release/ (permette a git di entrarci)
+!build/Release/
+
+# 3. Ignora TUTTO all'interno della cartella Release/
+build/Release/*
+
+# 4. ECCEZIONE: Salva solo i file .dll e .dylib dentro Release/
+!build/Release/*.dll
+!build/Release/*.dylib
+
+# Ignora le impostazioni locali di VS Code
+.vscode/
