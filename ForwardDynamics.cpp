@@ -25,6 +25,7 @@ int main() {
                 Model_file = "/Users/tommy/Documents/SEA_plugin_core/Adjusted_sea.osim";
                 TauRef_file = "/Users/tommy/Documents/SEA_plugin_core/3DGaitModel2392_Actuation_force.sto";
                 Kinematic_refs_file = "/Users/tommy/Documents/SEA_plugin_core/3DGaitModel2392_Kinematics_q.sto";
+                Results_file = "/Users/tommy/Documents/SEA-plugin-core - Results/";
             #endif
 
             Object::registerType(SeriesElasticActuator());

@@ -123,15 +123,15 @@ else()
     # ==============================================================================
     # Questo target serve per eseguire il main() in Test_SEA.cpp.
     # NOTA: Compiliamo SeriesElasticActuator.cpp anche qui per evitare problemi di linking su Mac.
-    add_executable(Test_SEA_App 
-        Test_SEA_Acrobot.cpp
-        SeriesElasticActuator.cpp
-        CustomControl.cpp
-    )
-    #Test_SEA.cpp
-    # Link alle librerie di OpenSim
-    target_link_libraries(Test_SEA_App ${OpenSim_LIBRARIES})
-    target_compile_options(Test_SEA_App PUBLIC "-fno-char8_t")
+    # add_executable(Test_SEA_App 
+    #     Test_SEA_Acrobot.cpp
+    #     SeriesElasticActuator.cpp
+    #     CustomControl.cpp
+    # )
+    # #Test_SEA.cpp
+    # # Link alle librerie di OpenSim
+    # target_link_libraries(Test_SEA_App ${OpenSim_LIBRARIES})
+    # target_compile_options(Test_SEA_App PUBLIC "-fno-char8_t")
 
     add_executable(ForwardDynamics_App 
         ForwardDynamics.cpp
