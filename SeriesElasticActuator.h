@@ -1,87 +1,77 @@
-#ifndef OPENSIM_SERIES_ELASTIC_ACTUATOR_H_
-#define OPENSIM_SERIES_ELASTIC_ACTUATOR_H_
+#ifndef SERIESELASTICACTUATOR_H
+#define SERIESELASTICACTUATOR_H
+
+/* -------------------------------------------------------------------------- *
+ * SeriesElasticActuator.h                                                    *
+ * Inherits from CoordinateActuator for native OpenSim gradient support.      *
+ * -------------------------------------------------------------------------- */
 
 #include <OpenSim/OpenSim.h>
-#include <OpenSim/Simulation/Model/Actuator.h>
+// CoordinateActuator is already included transitively by OpenSim/OpenSim.h
 
+using namespace OpenSim;
+using namespace SimTK;
 
-namespace OpenSim { 
+class SeriesElasticActuator : public OpenSim::CoordinateActuator {
+    OpenSim_DECLARE_CONCRETE_OBJECT(SeriesElasticActuator, CoordinateActuator);
 
-class PhysicalFrame;
-class Model;
+public:
+    // -----------------------------------------------------------------------
+    // Properties
+    // NOTE: optimal_force and coordinate socket are already provided by
+    //       CoordinateActuator – do NOT redeclare them here.
+    // -----------------------------------------------------------------------
+    OpenSim_DECLARE_PROPERTY(motor_inertia,  double, "Rotor inertia Jm [kg·m²]");
+    OpenSim_DECLARE_PROPERTY(motor_damping,  double, "Viscous damping Bm [N·m·s/rad]");
+    OpenSim_DECLARE_PROPERTY(stiffness,      double, "Spring stiffness K [N·m/rad]");
+    OpenSim_DECLARE_PROPERTY(Kp,             double, "Inner torque-loop proportional gain");
+    OpenSim_DECLARE_PROPERTY(Kd,             double, "Inner torque-loop derivative gain");
+    OpenSim_DECLARE_PROPERTY(Ideal,          bool,   "If true the SEA behaves as an ideal actuator");
 
-    class SeriesElasticActuator : public ScalarActuator {
-    OpenSim_DECLARE_CONCRETE_OBJECT(SeriesElasticActuator, ScalarActuator);
+    // -----------------------------------------------------------------------
+    // Constructors
+    // -----------------------------------------------------------------------
+    SeriesElasticActuator();
 
-    public:
-        //==============================================================================
-        // PROPRTIES (To be set from OpenSim or from XML file)
-        //==============================================================================
-        OpenSim_DECLARE_PROPERTY(motor_inertia, double, 
-            "Motor's Inertia (kg*m^2).");
-        
-        OpenSim_DECLARE_PROPERTY(motor_damping, double, 
-            "Motor's viscous effect (N*m*s/rad).");  // Is it relevant? Do I need to consider it?
-        
-        OpenSim_DECLARE_PROPERTY(stiffness, double, 
-            "Spring stiffness (N*m/rad).");
+    SeriesElasticActuator(const std::string& name,
+                          double inertia,
+                          double damping,
+                          double k,
+                          double Kp,
+                          double Kd,
+                          double optimal_force,
+                          bool   ideal);
 
-        OpenSim_DECLARE_PROPERTY(optimal_force, double, 
-            "Optimal force (N).");
+    // -----------------------------------------------------------------------
+    // Core OpenSim overrides
+    // -----------------------------------------------------------------------
 
-        //==============================================================================
-        // SOCKETS 
-        //==============================================================================
-        OpenSim_DECLARE_SOCKET(coordinate, Coordinate, 
-            "Coordinate on which SEA acts.");
+    /** Returns the spring torque (non-ideal) or u·F_opt (ideal). */
+    double computeActuation(const SimTK::State& s) const override;
 
-        //==============================================================================
-        // METODI PUBBLICI
-        //==============================================================================
-        SeriesElasticActuator();
+    // computeForce() is NOT overridden: CoordinateActuator::computeForce()
+    // already calls computeActuation() and applies the generalised force
+    // correctly, giving OpenSim the analytic gradient it needs.
 
-        SeriesElasticActuator(const std::string& name, double inertia, double damping, double k);
+    /** Motor dynamics: d/dt [theta_m, omega_m]. */
+    void computeStateVariableDerivatives(const SimTK::State& s) const override;
 
-        // ===============================================================
-        void extendConnectToModel(Model& model) override;
-        // ===============================================================
+    // -----------------------------------------------------------------------
+    // Accessors / Utilities
+    // -----------------------------------------------------------------------
+    double getSpeed (const SimTK::State& s) const override;
+    double getStress(const SimTK::State& s) const override;
+    double getPower (const SimTK::State& s) const override;
 
-        double getOptimalForce() const override;
-        double getStress(const SimTK::State& s) const override;
-        double getSpeed(const SimTK::State& s) const override;
+protected:
+    // -----------------------------------------------------------------------
+    // OpenSim component pipeline overrides
+    // -----------------------------------------------------------------------
+    void extendAddToSystem            (SimTK::MultibodySystem& system) const override;
+    void extendInitStateFromProperties(SimTK::State& s)               const override;
 
-        virtual ~SeriesElasticActuator() = default;
+private:
+    void constructProperties();
+};
 
-        int numControls() const override { return 1; }
-
-    protected:
-        // State's variable inizializations
-        void extendAddToSystem(SimTK::MultibodySystem& system) const override;
-
-        // ===============================================================
-        void extendInitStateFromProperties(SimTK::State& s) const override;
-        // ===============================================================
-
-        
-
-        double computeActuation(const SimTK::State& s) const override;
-        // Computation of the derivatives
-        void computeStateVariableDerivatives(const SimTK::State& s) const override;
-
-        void computeForce(const SimTK::State& s, 
-                        SimTK::Vector_<SimTK::SpatialVec>& bodyForces, 
-                        SimTK::Vector& generalizedForces) const override;
-        
-        void implProduceForces(const SimTK::State& s,
-                       OpenSim::ForceConsumer& forceConsumer) const override;
-
-        double getPower(const SimTK::State& s) const override;
-
-    private:
-        void constructProperties();
-
-    };
-    
-}
-
-#endif 
+#endif // SERIESELASTICACTUATOR_H

@@ -1,0 +1,248 @@
+/* -------------------------------------------------------------------------- *
+ * SeriesElasticActuator.cpp - FIXED & CLEANED VERSION                        *
+ * -------------------------------------------------------------------------- */
+#include "SeriesElasticActuator.h"
+#include <OpenSim/OpenSim.h>
+
+using namespace OpenSim;
+using namespace SimTK;
+using namespace std;
+
+//==============================================================================
+// COSTRUTTORI
+//==============================================================================
+SeriesElasticActuator::SeriesElasticActuator() {
+    setAuthors("Tommaso Scagliarini");
+    setReferences("Series Elastic Actuator plugin for OpenSim");
+    constructProperties();
+    
+    /* addStateVariable("motor_angle", Stage::Dynamics);
+    addStateVariable("motor_speed", Stage::Dynamics); */
+}
+
+SeriesElasticActuator::SeriesElasticActuator(const std::string& name, double inertia, double damping, double k, double Kp, double Kd, double optimal_force, bool ideal) {
+    constructProperties();
+    setName(name);
+    set_motor_inertia(inertia);
+    set_motor_damping(damping);
+    set_stiffness(k);
+    set_Kp(Kp);
+    set_Kd(Kd);
+    set_optimal_force(optimal_force);
+    set_Ideal(ideal);
+    
+    // addStateVariable("motor_angle", Stage::Dynamics);
+    // addStateVariable("motor_speed", Stage::Dynamics);
+}
+
+//==============================================================================
+// COSTRUZIONE PROPRIETÀ
+//==============================================================================
+void SeriesElasticActuator::constructProperties() {
+
+    constructProperty_motor_inertia(0.01);  
+    constructProperty_motor_damping(0.1); 
+    constructProperty_stiffness(250.0);
+    constructProperty_Kp(1000.0);
+    constructProperty_Kd(20.0);
+    constructProperty_optimal_force(100.0); 
+    constructProperty_Ideal(false);
+    // constructProperty_min_control(-1.0);
+    // constructProperty_max_control(1.0);
+}
+
+//==============================================================================
+// 1. REGISTRAZIONE NEL SISTEMA 
+//==============================================================================
+void SeriesElasticActuator::extendAddToSystem(MultibodySystem& system) const {
+
+    SeriesElasticActuator* mutableThis = const_cast<SeriesElasticActuator*>(this);
+    if(mutableThis->getNumStateVariables() == 0 && !get_Ideal()) {
+        
+        mutableThis->addStateVariable("motor_angle", Stage::Dynamics);
+        mutableThis->addStateVariable("motor_speed", Stage::Dynamics);
+    }
+
+    Super::extendAddToSystem(system);
+}
+
+//==============================================================================
+// 2. CONNESSIONE MODELLO
+//==============================================================================
+void SeriesElasticActuator::extendConnectToModel(Model& model) {
+    Super::extendConnectToModel(model);
+    // Safety check socket connection
+    if(!getSocket("coordinate").isConnected()) {
+        std::cerr << "[SEA WARNING] Socket 'coordinate' is not connected!" << std::endl;
+    }
+}
+
+//==============================================================================
+// 3. INIZIALIZZAZIONE DEGLI STATI
+//==============================================================================
+void SeriesElasticActuator::extendInitStateFromProperties(SimTK::State& s) const {
+    Super::extendInitStateFromProperties(s);
+    if(!get_Ideal()) {
+        if(getSocket("coordinate").isConnected()) {
+        const Coordinate& coord = getConnectee<Coordinate>("coordinate");
+        // Il motore parte DALLA STESSA POSIZIONE del ginocchio -> Molla scarica
+        double start_angle = coord.getValue(s);
+        setStateVariableValue(s, "motor_angle", start_angle);
+        } else {
+            setStateVariableValue(s, "motor_angle", 0.0);
+        }
+        setStateVariableValue(s, "motor_speed", 0.0);
+    }
+}
+
+//==============================================================================
+// 4. CALCOLO DERIVATE (DINAMICA MOTORE)
+//==============================================================================
+void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& s) const {
+    bool ideal = get_Ideal();
+    if (!ideal) {
+
+        // Get Motor's parameters
+        double Jm = get_motor_inertia();
+        double Bm = get_motor_damping();
+        double K  = get_stiffness();
+        double F_opt = getOptimalForce();
+        double Kp = get_Kp();
+        double Kd = get_Kd();
+        if (Jm < 1e-9) Jm = 1e-9;
+
+        double theta_m = 0.0; 
+        double omega_m = 0.0;
+        theta_m = getStateVariableValue(s, "motor_angle");
+        omega_m = getStateVariableValue(s, "motor_speed");
+        
+        // Get coordinate's state
+        const Coordinate& coord = getConnectee<Coordinate>("coordinate");
+        double theta_joint = coord.getValue(s); 
+
+
+        // Control input
+        double u = 0.0;
+
+        u = getControl(s);
+        
+        static int k = 0; 
+        k++;
+        
+        if (std::abs(u) > 0.001 && k % 100 == 0) {
+            printf("[SEA] t=%.3f | u=%.2f | motor angle=%.2f | joint angle=%.2f\n", s.getTime(), u, theta_m, theta_joint);
+        
+        }
+
+        double tau_spring = K * (theta_m - theta_joint);
+        double tau_ref = u* F_opt;
+        double tau_input = Kp*(tau_ref-tau_spring) - Kd*omega_m;
+        
+        double max_motor_torque = 500.0; 
+        tau_input = std::max(-max_motor_torque, std::min(max_motor_torque, tau_input));
+    
+        //double tau_input = u;//*F_opt;
+        double theta_m_dot = omega_m;
+        double omega_m_dot = (tau_input - tau_spring - (Bm * omega_m)) / Jm;
+
+        // 7. Set the derivatives
+        setStateVariableDerivativeValue(s, "motor_angle", theta_m_dot); 
+        setStateVariableDerivativeValue(s, "motor_speed", omega_m_dot);
+        //Super::computeStateVariableDerivatives(s);
+    }
+
+}
+
+double SeriesElasticActuator::computeActuation(const SimTK::State& s) const {
+    bool ideal = get_Ideal();
+    if (ideal) {
+        // In modalità ideale, l'attuazione è direttamente proporzionale al controllo
+       return getControl(s) * get_optimal_force();
+    } else {
+        // In modalità non ideale, l'attuazione è la forza della molla
+        const Coordinate& coord = getConnectee<Coordinate>("coordinate");
+        double theta_joint = coord.getValue(s); 
+        double theta_m = getStateVariableValue(s, "motor_angle");
+        double K  = get_stiffness();
+        return K * (theta_m - theta_joint);
+    }
+    
+}
+
+
+void SeriesElasticActuator::computeForce(const SimTK::State& s, 
+                                         SimTK::Vector_<SimTK::SpatialVec>& bodyForces, 
+                                         SimTK::Vector& generalizedForces) const {
+    
+    // 1. Calcola
+    double force_to_apply = computeActuation(s);
+    
+    // 2. REGISTRA (Questo previene il crash 0xC0000005!)
+    setActuation(s, force_to_apply); 
+
+    // 3. Applica
+    const Coordinate& coord = getConnectee<Coordinate>("coordinate");
+    applyGeneralizedForce(s, coord, force_to_apply, generalizedForces);
+}
+
+double SeriesElasticActuator::getOptimalForce() const {
+    return get_optimal_force(); 
+}
+
+double SeriesElasticActuator::getStress(const SimTK::State& s) const {
+    // Calcola lo stress come |Forza| / ForzaOttimale
+    // getActuation(s) è fornito da ScalarActuator e usa il tuo computeActuation
+    double force = getActuation(s);
+    double optForce = getOptimalForce();
+    
+    // Evitiamo divisioni per zero
+    if (optForce < 1e-10) return 0.0;
+    
+    return std::abs(force) / optForce;
+}
+
+double SeriesElasticActuator::getSpeed(const SimTK::State& s) const {
+    // La velocità "vista" dall'attuatore è la velocità della coordinata a cui è attaccato
+    return getConnectee<Coordinate>("coordinate").getSpeedValue(s);
+}
+//==============================================================================
+// 6. POTENZA
+//==============================================================================
+double SeriesElasticActuator::getPower(const State& s) const {
+    if (get_Ideal()) {
+        // In modalità ideale, la potenza è semplicemente forza * velocità della coordinata
+        double force = computeActuation(s);
+        double speed = getConnectee<Coordinate>("coordinate").getSpeedValue(s);
+        return force * speed;
+    } else {
+        double omega_m = 0.0;
+        try {
+            omega_m = getStateVariableValue(s, "motor_speed");
+        } catch(...) { return 0.0; }
+
+        double F_opt = getOptimalForce();
+        double u = 0.0;
+
+       /*  SimTK::Vector controls = getControls(s);
+        if (controls.size() > 0) {
+            u = controls[0];
+        } */
+        u = getControl(s);
+
+        double tau_input = u * F_opt;
+        /*if(isCacheVariableValid(s, "control")) {
+            SimTK::Vector controls = getControls(s);
+            if(controls.size() > 0) tau_input = controls[0];
+        }*/
+        return tau_input * omega_m;
+    }
+}
+
+/* void SeriesElasticActuator::implProduceForces(const SimTK::State& s,
+                                               OpenSim::ForceConsumer& forceConsumer) const
+{
+    double force_to_apply = computeActuation(s);
+    setActuation(s, force_to_apply);
+    const Coordinate& coord = getConnectee<Coordinate>("coordinate");
+    forceConsumer.consumeGeneralizedForce(s, coord, force_to_apply);
+} */

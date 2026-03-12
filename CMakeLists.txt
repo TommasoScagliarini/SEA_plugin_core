@@ -17,9 +17,13 @@ if(MSVC)
 
     # set(PLUGIN_TARGET SEA_Plugin_fusion_NoFeedTrough-V2) 
     # set(PLUGIN_TARGET SEA_Plugin_fusion_NoFeedTrough-inv)
-    set(PLUGIN_TARGET SEA_Plugin_mCMC-V2_1) # return springforce
+    # set(PLUGIN_TARGET SEA_Plugin_mCMC-V2_1) # return springforce
     # set(PLUGIN_TARGET SEA_direct_U)
     # set(PLUGIN_TARGET SEA_Plugin_1st_order)
+    # set(PLUGIN_TARGET SEA_Plugin_BlackBox_4-1_switch)
+     set(PLUGIN_TARGET SEA_Plugin_BlackBox_mCMC_switch)
+    # set(PLUGIN_TARGET SEA_Plugin_BlackBox_4-1_u)
+
 
     # C++14
     set(CMAKE_CXX_STANDARD 14)

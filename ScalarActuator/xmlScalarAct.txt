@@ -1,0 +1,27 @@
+
+				<SeriesElasticActuator name="SEA-switch">
+					<!--List of components that this component owns and serializes.-->
+					<components />
+					<!--Flag indicating whether the force is applied or not. If true the forceis applied to the MultibodySystem otherwise the force is not applied.NOTE: Prior to OpenSim 4.0, this behavior was controlled by the 'isDisabled' property, where 'true' meant that force was not being applied. Thus, if 'isDisabled' is true, then 'appliesForce` is false.-->
+					<appliesForce>true</appliesForce>
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-1</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Path to a Component that satisfies the Socket 'coordinate' of type Coordinate (description: Coordinate on which SEA acts.).-->
+					<socket_coordinate>/jointset/pros_knee/pros_knee_angle</socket_coordinate>
+					<!--Motor's Inertia (kg*m^2).-->
+					<motor_inertia>0.01</motor_inertia>
+					<!--Motor's viscous effect (N*m*s/rad).-->
+					<motor_damping>0.10000000000000001</motor_damping>
+					<!--Spring stiffness (N*m/rad).-->
+					<stiffness>250</stiffness>
+					<!--Low level controller proportional gain.-->
+					<Kp>1000</Kp>
+					<!--Low level controller derivative gain.-->
+					<Kd>20</Kd>
+					<!--Optimal force (N).-->
+					<optimal_force>500</optimal_force>
+					<!--If true, the SEA behaves like an ideal force actuator, ignoring the spring dynamics and directly applying the control input as force.-->
+					<Ideal>true</Ideal>
+				</SeriesElasticActuator>

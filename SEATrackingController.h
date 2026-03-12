@@ -60,7 +60,7 @@ public:
         double error = tau_des - tau_spring;
         double u = 0;
 
-        int choice = 1;
+        int choice = 3;
         if (choice == 0) {
             u = (_Kp * error);
 
@@ -73,6 +73,8 @@ public:
             double omega_joint = sea->getConnectee<Coordinate>("coordinate").getSpeedValue(s);
             double error_dot = tau_des_dot - K*(omega_m - omega_joint);
             u = _Kp * error + _Kd * (error_dot);
+        }else if (choice == 3){
+            u = tau_des/ sea->getOptimalForce();;
         }
         
 
