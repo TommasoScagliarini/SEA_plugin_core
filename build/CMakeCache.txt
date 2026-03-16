@@ -197,8 +197,8 @@ CustomActuatorExample_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CustomActuatorExample_SOURCE_DIR:STATIC=C:/Users/tomma/Desktop/Opensim OMNIBUS/SEA_plugin_core
 
-//The directory containing a CMake configuration file for OpenSim.
-OpenSim_DIR:PATH=C:/OpenSim-mCMC/cmake
+//No help, variable specified on the command line.
+OpenSim_DIR:STRING=C:/OpenSim 4.1/cmake
 
 //The directory containing a CMake configuration file for Simbody.
 Simbody_DIR:PATH=C:/OpenSim-mCMC/sdk/Simbody/cmake

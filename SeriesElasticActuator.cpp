@@ -27,7 +27,7 @@ SeriesElasticActuator::SeriesElasticActuator(const std::string& name,
                                              double Kp,
                                              double Kd,
                                              double optimal_force,
-                                             bool   ideal)
+                                             bool   impedence)
 {
     constructProperties();
     setName(name);
@@ -39,7 +39,7 @@ SeriesElasticActuator::SeriesElasticActuator(const std::string& name,
     // setOptimalForce() is the CoordinateActuator native setter – use it
     // instead of set_optimal_force() which no longer exists on this class.
     setOptimalForce(optimal_force);
-    set_Ideal(ideal);
+    set_Impedence(impedence);
 }
 
 //==============================================================================
@@ -52,7 +52,7 @@ void SeriesElasticActuator::constructProperties() {
     constructProperty_stiffness(250.0);
     constructProperty_Kp(1000.0);
     constructProperty_Kd(20.0);
-    constructProperty_Ideal(false);
+    constructProperty_Impedence(false);
     // NOTE: do NOT call constructProperty_optimal_force – it belongs to
     //       CoordinateActuator and is already constructed by the parent.
     //       Use setOptimalForce(value) to change the default (100 N·m).
@@ -63,13 +63,10 @@ void SeriesElasticActuator::constructProperties() {
 //==============================================================================
 
 void SeriesElasticActuator::extendAddToSystem(MultibodySystem& system) const {
-    // Add motor state variables only for the non-ideal (physical) mode.
-    // We must cast away const because addStateVariable is non-const.
-    SeriesElasticActuator* mutableThis = const_cast<SeriesElasticActuator*>(this);
-    if (mutableThis->getNumStateVariables() == 0 && !get_Ideal()) {
-        mutableThis->addStateVariable("motor_angle", Stage::Dynamics);
-        mutableThis->addStateVariable("motor_speed", Stage::Dynamics);
-    }
+    SeriesElasticActuator* mutableThis = const_cast<SeriesElasticActuator*>(this); 
+    mutableThis->addStateVariable("motor_angle", Stage::Dynamics);
+    mutableThis->addStateVariable("motor_speed", Stage::Dynamics);
+    
     // Always call parent last so the coordinate actuator sets itself up
     // AFTER we have registered our extra state variables.
     Super::extendAddToSystem(system);
@@ -84,13 +81,13 @@ void SeriesElasticActuator::extendAddToSystem(MultibodySystem& system) const {
 
 void SeriesElasticActuator::extendInitStateFromProperties(SimTK::State& s) const {
     Super::extendInitStateFromProperties(s);
-    if (!get_Ideal()) {
-        const Coordinate* coord = getCoordinate();
-        double start_angle = (coord != nullptr) ? coord->getValue(s) : 0.0;
-        // Motor starts at the same angle as the joint → spring is unloaded.
-        setStateVariableValue(s, "motor_angle", start_angle);
-        setStateVariableValue(s, "motor_speed", 0.0);
-    }
+
+    const Coordinate* coord = getCoordinate();
+    double start_angle = (coord != nullptr) ? coord->getValue(s) : 0.0;
+    // Motor starts at the same angle as the joint → spring is unloaded.
+    setStateVariableValue(s, "motor_angle", start_angle);
+    setStateVariableValue(s, "motor_speed", 0.0);
+    
 }
 
 //==============================================================================
@@ -98,8 +95,6 @@ void SeriesElasticActuator::extendInitStateFromProperties(SimTK::State& s) const
 //==============================================================================
 
 void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& s) const {
-    if (get_Ideal()) return; // No extra states in ideal mode.
-
     double Jm    = get_motor_inertia();
     double Bm    = get_motor_damping();
     double K     = get_stiffness();
@@ -122,23 +117,36 @@ void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& 
     ++debugCounter;
     if (std::abs(u) > 0.001 && debugCounter % 100 == 0) {
         printf("[SEA] t=%.3f | u=%.4f | theta_m=%.4f | theta_j=%.4f\n",
-               s.getTime(), u, theta_m, theta_joint);
+            s.getTime(), u, theta_m, theta_joint);
     }
 
-    // Inner torque-tracking loop
+    double tau_input = 0.0;
     double tau_spring = K * (theta_m - theta_joint);
-    double tau_ref    = u * F_opt;
-    double tau_input  = Kp * (tau_ref - tau_spring) - Kd * omega_m;
 
-    // Saturate motor torque
-    const double MAX_MOTOR_TORQUE = 500.0;
-    tau_input = std::max(-MAX_MOTOR_TORQUE, std::min(MAX_MOTOR_TORQUE, tau_input));
+    if (get_Impedence()){
+        double tau_ref = u * F_opt;
+        double theta_m_ref = theta_joint + tau_ref / K;
+        double omega_joint = (coord != nullptr) ? coord->getSpeedValue(s) : 0.0;
+        double omega_m_ref = omega_joint;
+        double tau_feedforward = tau_spring + (Bm * omega_m);
 
-    double theta_m_dot = omega_m;
-    double omega_m_dot = (tau_input - tau_spring - Bm * omega_m) / Jm;
+        tau_input = tau_feedforward + Kp * (theta_m_ref - theta_m) + Kd * (omega_m_ref - omega_m);
 
-    setStateVariableDerivativeValue(s, "motor_angle", theta_m_dot);
-    setStateVariableDerivativeValue(s, "motor_speed",  omega_m_dot);
+    }else{
+        double tau_ref    = u * F_opt;
+
+        tau_input  = Kp * (tau_ref - tau_spring) - Kd * omega_m;
+
+    }
+        const double MAX_MOTOR_TORQUE = 500.0;
+        tau_input = std::max(-MAX_MOTOR_TORQUE, std::min(MAX_MOTOR_TORQUE, tau_input));
+
+        double theta_m_dot = omega_m;
+        double omega_m_dot = (tau_input - tau_spring - Bm * omega_m) / Jm;
+
+        setStateVariableDerivativeValue(s, "motor_angle", theta_m_dot);
+        setStateVariableDerivativeValue(s, "motor_speed",  omega_m_dot);
+    
 }
 
 //==============================================================================
@@ -146,11 +154,9 @@ void SeriesElasticActuator::computeStateVariableDerivatives(const SimTK::State& 
 //==============================================================================
 
 double SeriesElasticActuator::computeActuation(const SimTK::State& s) const {
-    if (get_Ideal()) {
-        // Ideal mode: direct force proportional to normalised control signal.
-        return getControl(s) * getOptimalForce();
+    if (get_Impedence()) {
+        return getOptimalForce() * getControl(s); // Ideal actuation for impedance control
     } else {
-        // Non-ideal mode: output is the spring torque.
         const Coordinate* coord = getCoordinate();
         double theta_joint = (coord != nullptr) ? coord->getValue(s) : 0.0;
         double theta_m     = getStateVariableValue(s, "motor_angle");
@@ -183,21 +189,13 @@ double SeriesElasticActuator::getStress(const SimTK::State& s) const {
 //==============================================================================
 
 double SeriesElasticActuator::getPower(const SimTK::State& s) const {
-    if (get_Ideal()) {
-        // Ideal: P = tau · omega_joint
-        double force = computeActuation(s);
-        const Coordinate* coord = getCoordinate();
-        double speed = (coord != nullptr) ? coord->getSpeedValue(s) : 0.0;
-        return force * speed;
-    } else {
-        // Non-ideal: P = tau_input · omega_motor
-        double omega_m = 0.0;
-        try {
-            omega_m = getStateVariableValue(s, "motor_speed");
-        } catch (...) { return 0.0; }
+    double omega_m = 0.0;
+    try {
+        omega_m = getStateVariableValue(s, "motor_speed");
+    } catch (...) { return 0.0; }
 
-        double u         = getControl(s);
-        double tau_input = u * getOptimalForce();
-        return tau_input * omega_m;
-    }
+    double u         = getControl(s);
+    double tau_input = u * getOptimalForce();
+    return tau_input * omega_m;
+    
 }

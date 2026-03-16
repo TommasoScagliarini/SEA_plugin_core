@@ -20,8 +20,8 @@ if(MSVC)
     # set(PLUGIN_TARGET SEA_Plugin_mCMC-V2_1) # return springforce
     # set(PLUGIN_TARGET SEA_direct_U)
     # set(PLUGIN_TARGET SEA_Plugin_1st_order)
-    # set(PLUGIN_TARGET SEA_Plugin_BlackBox_4-1_switch)
-     set(PLUGIN_TARGET SEA_Plugin_BlackBox_mCMC_switch)
+     set(PLUGIN_TARGET SEA_Plugin_BlackBox_4-1_impedence)
+    # set(PLUGIN_TARGET SEA_Plugin_BlackBox_mCMC_impedence)
     # set(PLUGIN_TARGET SEA_Plugin_BlackBox_4-1_u)
 
 

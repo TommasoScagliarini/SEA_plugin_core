@@ -26,7 +26,7 @@ public:
     OpenSim_DECLARE_PROPERTY(stiffness,      double, "Spring stiffness K [N·m/rad]");
     OpenSim_DECLARE_PROPERTY(Kp,             double, "Inner torque-loop proportional gain");
     OpenSim_DECLARE_PROPERTY(Kd,             double, "Inner torque-loop derivative gain");
-    OpenSim_DECLARE_PROPERTY(Ideal,          bool,   "If true the SEA behaves as an ideal actuator");
+    OpenSim_DECLARE_PROPERTY(Impedence,          bool,   "If true the SEA is controlled by an impedence controller, otherwise by a PD controller");
 
     // -----------------------------------------------------------------------
     // Constructors
@@ -40,7 +40,7 @@ public:
                           double Kp,
                           double Kd,
                           double optimal_force,
-                          bool   ideal);
+                          bool   impedence);
 
     // -----------------------------------------------------------------------
     // Core OpenSim overrides
